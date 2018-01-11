@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebApiJwt.Entities
@@ -14,8 +13,8 @@ namespace WebApiJwt.Entities
         private static string GetConnectionString()
         {
             const string databaseName = "webapijwt";
-            const string databaseUser = "root";
-            const string databasePass = "1";
+            const string databaseUser = "webapijwt";
+            const string databasePass = "pioupiou123!";
             
             return $"Server=localhost;" +
                    $"database={databaseName};" +

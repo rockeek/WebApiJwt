@@ -1,0 +1,135 @@
+{
+	"info": {
+		"name": "WebApiJwt",
+		"_postman_id": "1d52b258-0f62-44a6-a456-7cd4cb4e745b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Email\": \"bonjour@france.fr\",\r\n\t\"Password\": \"coucouToi123#\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:53945/Account/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53945",
+					"path": [
+						"Account",
+						"Register"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Email\": \"bonjour@france.fr\",\r\n  \"Password\": \"coucouToi123#\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:53945/Account/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53945",
+					"path": [
+						"Account",
+						"Login"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Protected unauthorized",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:53945/Account/Protected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53945",
+					"path": [
+						"Account",
+						"Protected"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Protected authorized",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJib25qb3VyQGZyYW5jZS5mciIsImp0aSI6IjY2YWI2ZjU4LWZmODctNDI4My1hNTFjLWIzNmVlMjI3MWYzMiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiYWY4YjFhY2MtOTNhYy00MGE2LThkYWUtMTM3MzNlYTE1YzZmIiwiZXhwIjoxNTE4Mjc2OTcxLCJpc3MiOiJodHRwOi8veW91cmRvbWFpbi5jb20iLCJhdWQiOiJodHRwOi8veW91cmRvbWFpbi5jb20ifQ._3U2xK8kDCdjLaomKIZUmCkUbWvmhR86TzRCujXGzAI"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:53945/Account/Protected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "53945",
+					"path": [
+						"Account",
+						"Protected"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
